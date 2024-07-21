@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sound Player</title>
+    <script>
+        window.addEventListener('message', function(event) {
+            if (event.data.transactionType === 'playSound') {
+                var audio = new Audio('sounds/' + event.data.transactionFile);
+                audio.volume = 1.0;  // Vous pouvez ajuster le volume ici
+                audio.play();
+            }
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
